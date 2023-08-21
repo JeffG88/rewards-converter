@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RewardValueTests {
 
@@ -21,10 +23,16 @@ public class RewardValueTests {
     @Test
     void convert_from_cash_to_miles() {
         // This test is not yet implemented
+        double cashValue = 100;
+        var rewardValue = new RewardValue(cashValue);
+        assertFalse(rewardValue.getCashValue() != 100.0);
     }
 
     @Test
     void convert_from_miles_to_cash() {
         // This test is not yet implemented
+        int milesValue = 1000;
+        var rewardValue = new RewardValue(milesValue);
+        assertFalse(rewardValue.getCashValue() == 5 );
     }
 }
